@@ -121,7 +121,7 @@ let g:elm_setup_keybindings = 1
 
 * `:ElmMake [filename]` calls `elm make` with the given file. If no file is given it uses the current file being edited.
 
-* `:ElmMakeMain` attempts to call `elm-make` with "Main.elm".
+* `:ElmMakeMain` attempts to call `elm make` with "src/Main.elm".
 
 * `:ElmTest` calls `elm-test` with the given file. If no file is given it runs it in the root of your project.
 

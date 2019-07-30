@@ -81,7 +81,7 @@ COMMANDS                                                         *elm-commands*
 
 :ElmMakeMain
 
-    ElmMakeMain attempts to call `elm-make` with "Main.elm".
+    ElmMakeMain attempts to call `elm make` with "src/Main.elm".
 
 :ElmTest [file]
 
