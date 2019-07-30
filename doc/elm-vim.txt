@@ -66,10 +66,9 @@ plugins.
     Copy all of the files into your `~/.vim` directory
 <
 
-Please be sure all necessary binaries are installed (such as `elm-make`,
-`elm-doc`, `elm-reactor`, etc..) from http://elm-lang.org/. You may also want
-to install `elm-test` with 'npm install -g elm-test' if you want to run unit
-tests from within vim.
+Please be sure that the `elm` binary is installed (see http://elm-lang.org/).
+You may also want to install `elm-test` with 'npm install -g elm-test' if you
+want to run unit tests from within vim.
 
 
 ===============================================================================
@@ -116,8 +115,8 @@ COMMANDS                                                         *elm-commands*
 MAPPINGS                                                         *elm-mappings*
 
 elm-vim has several <Plug> keys which can be used to create custom mappings
-For example, to create a mapping that `elm make` the current file, create a
-mapping for the `(elm-make)` plug: >
+For example, to create a mapping that compiles the current file with
+`elm make`, create a mapping for the `(elm-make)` plug: >
 
   au FileType elm nmap <leader>m <Plug>(elm-make)
 
@@ -164,7 +163,7 @@ found when running commands. By default it's enabled.
 <
                                                      *'g:elm_make_output_file'*
 
-This setting configures which file elm-make will compile to.
+This setting configures which file `elm make` will compile to.
 >
   let g:elm_make_output_file = "elm.js"
 <
