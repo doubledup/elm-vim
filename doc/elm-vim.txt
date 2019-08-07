@@ -215,6 +215,13 @@ This setting toggles whether format errors show be display.
   let g:elm_format_fail_silently = 0
 <
 
+                                                 *'g:elm_oracle_enabled'*
+
+This setting toggles whether format errors show be display.
+>
+  let g:elm_oracle_enabled = 0
+<
+
 
 ===============================================================================
 TROUBLESHOOTING                                           *elm-troubleshooting*

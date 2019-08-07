@@ -35,6 +35,10 @@ if !exists('g:elm_setup_keybindings')
 	let g:elm_setup_keybindings = 1
 endif
 
+if !exists('g:elm_oracle_enabled')
+    let g:elm_oracle_enabled = 1
+endif
+
 setlocal omnifunc=elm#Complete
 
 setlocal comments=:--

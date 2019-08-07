@@ -38,39 +38,40 @@ class Source(Base):
         return None
 
     def gather_candidates(self, context):
-        file_path = self.current.buffer.name
-        current_path = self.get_project_root(file_path)
-        query = self.get_complete_query(context)
-        cmd = 'cd {} && {} {} "{}"'.format(current_path, self.oracle_cmd,
-                                           file_path, query)
-        if not query or query == '':
-            return []
+        # file_path = self.current.buffer.name
+        # current_path = self.get_project_root(file_path)
+        # query = self.get_complete_query(context)
+        # cmd = 'cd {} && {} {} "{}"'.format(current_path, self.oracle_cmd,
+        #                                    file_path, query)
+        # if not query or query == '':
+        #     return []
 
-        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
-        output = proc.stdout.read()
+        # proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
+        # output = proc.stdout.read()
 
-        jsonData = str(output.decode('utf-8'))
+        # jsonData = str(output.decode('utf-8'))
 
-        if not jsonData or jsonData == '':
-            return []
+        # if not jsonData or jsonData == '':
+        #     return []
 
-        result = json.loads(jsonData)
+        # result = json.loads(jsonData)
 
-        if not result:
-            return []
+        # if not result:
+        #     return []
 
-        candidates = []
+        # candidates = []
 
-        for item in result:
-            word = self.get_word(item, query)
-            candidate = {'word': word,
-                         'abbr': word,
-                         'kind': item['signature'],
-                         'info': item['comment'],
-                         'dup': 0}
-            candidates.append(candidate)
+        # for item in result:
+        #     word = self.get_word(item, query)
+        #     candidate = {'word': word,
+        #                  'abbr': word,
+        #                  'kind': item['signature'],
+        #                  'info': item['comment'],
+        #                  'dup': 0}
+        #     candidates.append(candidate)
 
-        return candidates
+        # return candidates
+        return []
 
     def get_word(self, item, query):
         if item['name'].find(query) == 0:

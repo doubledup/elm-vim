@@ -96,7 +96,11 @@ function! elm#ShowDocs() abort
 		return
 	endif
 
-	let l:response = s:elmOracle()
+	if g:elm_oracle_enabled == 1
+		let l:response = s:elmOracle()
+	else
+		let l:response = ''
+	endif
 
 	if len(l:response) > 0
 		let l:info = l:response[0]
